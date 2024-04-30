@@ -1,31 +1,49 @@
-import { StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
+import Input from '@/components/input';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
 
-export default function TabOneScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
-  );
+export default function Cadastro(){
+  return(
+    <>
+  <View style={styles.view1} >
+    <Text style={styles.title} >Bem Vindo</Text>
+    <Text style={styles.text1} >Realize o Login para entrar</Text>
+  </View>
+
+  <View style={styles.view2}>
+   <Input nome='EMAIL' ></Input>
+  </View>
+
+  </>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+
+  view1:{
+    backgroundColor: '#AC94F4',
+    maxWidth: '100%',
+  
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    view2:{
+      backgroundColor: '#AC94F4',
+      maxWidth: '100%',
+      height: '100%'
+
+
+
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+    title:{
+      fontSize: 50,
+      textAlign: 'center',
+      marginTop: 50,
+
+    },
+
+    text1:{
+      fontSize: 20,
+      textAlign: 'center',
+
+    }
+})
